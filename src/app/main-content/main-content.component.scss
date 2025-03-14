@@ -1,0 +1,13 @@
+.main-content-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper{
+    overflow: hidden;
+    width: 100%;
+    max-width: 3440px;
+    background-color: var(--background);
+}

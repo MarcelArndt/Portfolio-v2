@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'font-awesome/scss/font-awesome';
+
+@font-face {
+    font-family: 'inter';
+    font-weight: 100 1000;
+    src: url('./../public/fonts/Inter-VariableFont.ttf') format('truetype');
+}
+
+:root{
+    --body-background: #12021F;
+    --background : #131428;
+    --white : #ffffff;
+    --grey :  #2E3455;
+    --purble: #1C0018;
+    --pink : #BB00FF;
+    --red : #ED043E;
+    --normal-text-size: #{clamp(1rem, 2vw, 1.5rem)};
+    --icon-size: 1.25rem;
+    --h1-size: #{clamp(2.5rem, 10vw, 7.5rem)};
+    --h2-size: #{clamp(1.5rem, 6vw, 5rem)};
+}
+
+body {
+    scroll-behavior: smooth;
+    margin: 0 0;
+    background-color: var(--hover-black);
+    font-family: 'inter';
+    font-weight: 300;
+    background-color: var(--body-background);
+    color: var(--white);
+    font-size: var(--normal-text-size);
+}
+
+ul {
+    list-style: none;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+    padding-inline: 0px;
+    padding-block-end: 0px;
+    padding-block-start: 0px;
+    padding-block: 0px;
+}
+
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+h1{
+    background-image: linear-gradient(45deg, var(--pink) 0%, var(--red) 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    display: inline-block;
+    width: max-content;
+    font-weight: 300;
+    font-size: var(--h1-size);
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h2 {
+    background-image: linear-gradient(45deg, var(--pink) 0%, var(--red) 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    display: inline-block;
+    width: max-content;
+    font-weight: 300;
+    font-size: var(--h2-size);
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+icon{
+    user-select: none;
+}
+
+.decoration-middle{
+    position: absolute;
+    left: 0px;
+
+}
+
+.decoration-right{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
