@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100dvh;
+    min-height: calc(100dvh + 0px);
     background-image: url(../../../../public/site-elements/hero-wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,6 +31,7 @@
 
 p{
     font-size: var(--h2-size);
+    margin-bottom: 16px;
 }
 
 .picture{
@@ -39,9 +40,9 @@ p{
     align-items: center;
     justify-content: center;
     width: clamp(300px, 40vw, 897px);
-    height: 100%;
+    top: 32px;
     position: absolute;
-    right: 5%;
+    right: calc(112px - 96px);
     img{
         width: 100%;
         filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
@@ -52,7 +53,7 @@ p{
 .category{
     display: flex;
     width: max-content;
-    margin: 16px 0px;
+    margin: 24px 0px;
 
     .category-button{
         margin-right: 16px;
@@ -183,15 +184,15 @@ icon{
 
 @keyframes slide{
     0%{
-        transform: translateY(-15px);
-    }
-
-    50%{
         transform: translateY(15px);
     }
 
+    50%{
+        transform: translateY(35px);
+    }
+
     100%{
-        transform: translateY(-15px);
+        transform: translateY(15px);
     }
 }
 
@@ -204,7 +205,6 @@ icon{
     25%{
         opacity: 20%;
     }
-
 
     50%{
         transform: translateY(3px);
@@ -243,6 +243,7 @@ icon{
     .left-container{
         width: 100%;
         padding: 20vh 0px 8vh 0px;
+        transition: padding 0.5s ease-in;
     }
 
     .main-container{
@@ -257,6 +258,11 @@ icon{
              margin: 0px 0px;
              scale:(0.9);
         }
+    }
+
+    .category{
+        margin: 0px 0px;
+        transition: margin 1s ease-in;
     }
 
     .links{

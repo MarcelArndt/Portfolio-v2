@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { IconComponent } from '../icon/icon.component';
 
 @Component({
-  selector: 'app-head-navigation',
-  imports: [],
+  selector: 'head-navigation',
+  imports: [ IconComponent ],
   templateUrl: './head-navigation.component.html',
   styleUrl: './head-navigation.component.scss'
 })
