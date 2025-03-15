@@ -23,11 +23,18 @@
     align-items: center;
     box-sizing: border-box;
     z-index: 2;
-    max-width: 2560px;
+    max-width: 1920px;
     width: 100%;
     position: relative;
     padding: 0px 112px;
 
+}
+
+.mobil-logo{
+    display: none;
+    img{
+        height: 44px;;
+    }
 }
 
 .logo{
@@ -39,12 +46,41 @@ nav{
     display: flex;
     align-items: center;
     
-    ul{
+    .navigation{
         margin-right: 64px;
         display: flex;
+
+        a{
+            text-decoration: none;
+            color: var(--white);
+            margin-left: 32px;
+            
+        }
     }
 
-    li{
+    .navigation-icon{
+        user-select: none;
+        margin-top: 4px;
+        position: relative;
+        font-size: 36px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        &:hover{ 
+            cursor: pointer;
+            color: var(--pink);
+        }
+
+
+        ul li{
+            display: flex;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+
+    }
+
+    .navigation li{
         border: 2px solid transparent;
         background-clip: padding-box;
         background-color: transparent;
@@ -69,15 +105,11 @@ nav{
             -webkit-mask-composite: xor;
             mask-composite: exclude;
         }
-    }
 
 
-    a{
-        text-decoration: none;
-        color: var(--white);
-        margin-left: 32px;
-        
+
     }
+
 }
 
 .language{
@@ -104,6 +136,55 @@ nav{
         border-color: var(--pink);
         cursor: pointer;
         color: var(--white);
+    }
+}
+
+@media (max-width: 1400px){
+    .wrapper-delimiter{
+        padding: 0px 64px;
+        transition: padding 0.25s ease-in;
+
+        .logo{
+            img{
+                width: 170px;
+                height: auto;
+                flex-grow: 0;
+                transition: all 0.25s ease-in;
+            }
+        }
+    }
+
+    .navigation-icon{
+        display: flex !important;
+        max-width: 36px;
+    }
+
+    .navigation{
+        display: none !important;
+    }
+}
+
+@media(max-width: 780px){
+    .wrapper-delimiter{
+        padding: 0px 32px;
+        transition: padding 0.25s ease-in;
+    }
+}
+
+
+@media(max-width: 416px){
+    .wrapper-delimiter{
+
+
+        .logo{
+            display: none;
+        }
+        .mobil-logo{
+            img{
+                height: 36px;
+            }
+            display: flex;
+        }
     }
 }
 

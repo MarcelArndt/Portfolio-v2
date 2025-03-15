@@ -1,0 +1,119 @@
+.nav-body {
+    --burger-nav-backgound-color: var(--grey);
+    --burger-nav-font-color: var(--white);
+    --burger-nav-font-hover-color: var(--pink);
+    --burger-nav-padding-width: 16px;
+    border-radius: 12px;
+    top: 56px;
+    left: -77px;
+    position: absolute;
+    width: 120px;
+    margin-top: 8px;
+    background-color: var(--burger-nav-backgound-color) !important;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: var(--burger-nav-font-hover-color);
+    overflow: hidden;
+}
+
+
+.init {
+    display: none;
+    height: 0%;
+    opacity: 0;
+    padding: 0px var(--burger-nav-padding-width);
+}
+
+.display-off{
+    display: none;
+}
+
+.open-nav {
+    animation: open-navigation-animation 0.25s ease-in-out forwards;
+}
+
+.close-nav {
+    animation: close-navigation-animation 0.25s ease-in-out forwards;
+}
+
+
+:host ::ng-deep ul {
+    width: max-content;
+    height: max-content;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+    padding-inline: 0px;
+    padding-block: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+:host ::ng-deep a {
+    text-decoration: none;
+    text-align: center;
+}
+
+:host ::ng-deep li {
+    user-select: none;
+    cursor: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    z-index: 1000;
+    color: var(--burger-nav-font-color);
+    padding: 6px 0px;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--burger-nav-font-hover-color);
+    }
+}
+
+.nav-content {
+    display: flex;
+}
+
+@keyframes open-navigation-animation {
+    0% {
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        height: 0px;
+        padding: 0px var(--burger-nav-padding-width);
+    }
+
+    100% {
+        opacity: 1;
+        height: 120px;
+        padding: 16px var(--burger-nav-padding-width);
+    }
+}
+
+@keyframes close-navigation-animation {
+    0% {
+        display: flex;
+        justify-content: center;
+        opacity: 1;
+        height: 120px;
+        padding: 16px var(--burger-nav-padding-width);
+    }
+
+    100% {
+        opacity: 0;
+        height: 0px;
+        padding: 0px var(--burger-nav-padding-width);
+    }
+}

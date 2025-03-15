@@ -12,13 +12,6 @@
     background-size: cover;
 }
 
-.wrapper-delimiter{
-    z-index: 2;
-    max-width: 2560px;
-    width: 100%;
-    position: relative;
-}
-
 .left-container{
     min-height: 100dvh;
     width: max-content;
@@ -34,16 +27,77 @@ p{
     margin-bottom: 16px;
 }
 
+.animation-picture-container{
+    display: flex;
+    position: absolute;
+    top: 112px;
+    width: 600px;
+    right: 0px;
+    height: 700px;
+
+}
+
+.element-left-top{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    top:205px;
+    animation: flow 6s ease-in infinite;
+    animation-delay: 1s;
+    filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
+}
+
+.element-left-down{
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 30px;
+    bottom: -70px;
+    animation: flow 6s ease-in infinite;
+    filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
+}
+
+.element-right-top{
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 120px;
+    top: 95px;
+    animation: flow 7s ease-in infinite;
+    filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
+}
+
+.element-right-down{
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 120px;
+    bottom: 95px;
+    animation: flow 6.5s ease-in infinite;
+    animation-delay: 0.5s;
+    filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
+}
+
 .picture{
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(300px, 40vw, 897px);
-    top: 32px;
+    width: clamp(300px, 40vw, 600px);
     position: absolute;
-    right: calc(112px - 96px);
+    top: 0px;
+    right: 96px;
     img{
+        max-width: 600px;
         width: 100%;
         filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
     }
@@ -182,6 +236,22 @@ icon{
     }
 }
 
+@keyframes flow {
+    0%{
+        transform: translateY(0px);
+    }
+
+
+    50%{
+        transform: translateY(25px);
+    }
+
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 @keyframes slide{
     0%{
         transform: translateY(15px);
@@ -236,7 +306,7 @@ icon{
 }
 
 @media (max-width:1860px){
-    .picture{
+    .animation-picture-container{
         display: none;
     }
 

@@ -21,6 +21,12 @@
     --h2-size: #{clamp(1.5rem, 6vw, 5rem)};
 }
 
+body.no-scroll{
+    max-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
 body {
     scroll-behavior: smooth;
     margin: 0 0;
@@ -97,4 +103,11 @@ icon{
     position: absolute;
     right: 0px;
     top: 0px;
+}
+
+.wrapper-delimiter{
+    z-index: 2;
+    max-width: 1920px;
+    width: 100%;
+    position: relative;
 }

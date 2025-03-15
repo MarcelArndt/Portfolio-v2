@@ -1,0 +1,34 @@
+<section class="wrapper">
+    <div class="wrapper-delimiter">
+        <div class="logo"><img src="./logo/logo-full.png"></div>
+        <div class="mobil-logo"><img src="./logo/single-elment.svg"></div>
+        <nav>
+            <ul class="navigation">
+                <a href="#about-me"><li>About Me</li></a>
+                <a href="#start"><li>Skills</li></a>
+                <a href="#start"><li>Portfolio</li></a>
+                <a href="#start"><li>Contact</li></a>
+            </ul>
+
+            <div class="navigation-icon" (click)="menu.preventClick($event); menu.toggleMenu();">
+                <icon>menu</icon>
+
+                <menu #menu>
+                    <ul>
+                        <a href="#about-me"><li>About Me</li></a>
+                        <a href="#start"><li>Skills</li></a>
+                        <a href="#start"><li>Portfolio</li></a>
+                        <a href="#start"><li>Contact</li></a>
+                    </ul>
+                </menu>
+
+            </div>
+
+            <div class="language">
+                <p>ENG</p>
+                <icon>language</icon>
+            </div>
+
+        </nav>
+    </div>
+</section>
