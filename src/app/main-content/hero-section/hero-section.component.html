@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div *ngIf="textService.texte$ | async as texte" class="wrapper">
 
     <div class="decoration-middle"><img src="./site-elements/white-middle-element.png"></div>
     <div class="decoration-right"><img src="./site-elements/pink-element.png"></div>
@@ -6,25 +6,25 @@
     <div class="scroll-marker-container">
         <div class="scroll-marker">
             <hr>
-            Scroll Down
+                {{texte?.['heroSection']?.['utils']?.[1]}}
             <hr>
         </div>
     </div>
 
     <div class="animation-picture-container">
-        <div class="element-left-top"><img  src="./site-elements/Polygon 7.png"></div>
-        <div class="element-left-down"><img  src="./site-elements/Polygon 22.png"></div>
-        <div class="element-right-down"><img  src="./site-elements/Polygon 24.png"></div>
-       <!-- <div class="element-right-top"><img  src="./site-elements/Polygon 23.png"></div> -->
-        <div class="picture"> <img  src="./site-elements/picture.png"> </div>
+        <div class="element element-left-top"><img  src="./site-elements/Polygon 7.png"></div>
+        <div class="element element-left-down"><img  src="./site-elements/Polygon 22.png"></div>
+        <div class="element element-right-down"><img  src="./site-elements/Polygon 24.png"></div>
+       <!-- <div class="element element-right-top"><img  src="./site-elements/Polygon 23.png"></div> -->
+        <div class="element picture"> <img  src="./site-elements/picture.png"> </div>
     </div>
 
     <div class="left-container">
         <div class="main-container">
             <div>
-                <h1>Web-Developer</h1>
-                <p>Hello There!</p>
-                <p>I'm Marcel Arndt</p>
+                <h1>{{texte?.['heroSection']?.['headline']?.[0]}}</h1>
+                <p>{{texte?.['heroSection']?.['headline']?.[1]}}</p>
+                <p>{{texte?.['heroSection']?.['headline']?.[2]}}</p>
             </div>
     
             <div class="category">
@@ -34,7 +34,7 @@
         </div>
     
         <div class="links">
-            Follow me:
+            {{texte?.['heroSection']?.['utils']?.[0]}}
             <ul>
                 <a href="mailto:{{config.email}}"><li><icon>mail</icon></li></a>
                 <a [href]="config.github"><li><icon><i class="fa fa-git"></i></icon></li></a>

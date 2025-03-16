@@ -1,0 +1,24 @@
+{
+    "german":{
+        "headline":[
+            "Web-Entwickler",
+            "Hey Leute!",
+            "Ich bin Marcel"
+        ],
+        "utils":[
+            "Folge mir auf:",
+            "Weiterscrollen"
+        ]
+    },
+    "english":{
+        "headline":[
+            "Web-Developer",
+            "Hello There!",
+            "I'm Marcel"
+        ],
+        "utils":[
+            "Follow me:",
+            "Scroll Down"
+        ]
+    }
+   }

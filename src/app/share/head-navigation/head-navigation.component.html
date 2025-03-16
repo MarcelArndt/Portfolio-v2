@@ -1,13 +1,13 @@
-<section class="wrapper">
+<section class="wrapper" *ngIf="textService.texte$ | async as texte">
     <div class="wrapper-delimiter">
         <div class="logo"><img src="./logo/logo-full.png"></div>
         <div class="mobil-logo"><img src="./logo/single-elment.svg"></div>
         <nav>
             <ul class="navigation">
-                <a href="#about-me"><li>About Me</li></a>
-                <a href="#start"><li>Skills</li></a>
-                <a href="#start"><li>Portfolio</li></a>
-                <a href="#start"><li>Contact</li></a>
+                <a href="#about-me"><li> {{texte?.['navigation']?.['titles']?.[0]}} </li></a>
+                <a href="#start"><li>{{texte?.['navigation']?.['titles']?.[1]}} </li></a>
+                <a href="#start"><li>{{texte?.['navigation']?.['titles']?.[2]}} </li></a>
+                <a href="#start"><li>{{texte?.['navigation']?.['titles']?.[3]}} </li></a>
             </ul>
 
             <div class="navigation-icon" (click)="menu.preventClick($event); menu.toggleMenu();">
@@ -15,17 +15,16 @@
 
                 <menu #menu>
                     <ul>
-                        <a href="#about-me"><li>About Me</li></a>
-                        <a href="#start"><li>Skills</li></a>
-                        <a href="#start"><li>Portfolio</li></a>
-                        <a href="#start"><li>Contact</li></a>
+                        <a href="#about-me"><li>{{texte?.['navigation']?.['titles']?.[0]}}</li></a>
+                        <a href="#start"><li>{{texte?.['navigation']?.['titles']?.[1]}}</li></a>
+                        <a href="#start"><li>{{texte?.['navigation']?.['titles']?.[2]}}</li></a>
+                        <a href="#start"><li>{{texte?.['navigation']?.['titles']?.[3]}}</li></a>
                     </ul>
                 </menu>
 
             </div>
-
-            <div class="language">
-                <p>ENG</p>
+            <div class="language" (click)="textService.switchLanguage(textService.currentLanguage[1])">
+                <p>{{texte?.['navigation']?.['titles']?.[4]}}</p>
                 <icon>language</icon>
             </div>
 

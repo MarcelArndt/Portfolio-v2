@@ -13,12 +13,13 @@
     --white : #ffffff;
     --grey :  #2E3455;
     --purble: #1C0018;
+    --dark-pink: #33004d;
     --pink : #BB00FF;
     --red : #ED043E;
     --normal-text-size: #{clamp(1rem, 2vw, 1.5rem)};
     --icon-size: 1.25rem;
     --h1-size: #{clamp(2.5rem, 10vw, 7.5rem)};
-    --h2-size: #{clamp(1.5rem, 6vw, 5rem)};
+    --h2-size: #{clamp(2.5rem, 6vw, 5rem)};
 }
 
 body.no-scroll{

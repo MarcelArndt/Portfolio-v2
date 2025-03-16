@@ -1,115 +1,32 @@
-.main-wrapper{
-    position: absolute;
-    z-index: 999;
-    top: 0px;
+.background {
+    z-index: 1000;
+    position: fixed;
+    top:0px;
     left: 0px;
+    height: 100vh;
     width: 100%;
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    animation: display-off 0.125s ease-in forwards;
-    animation-delay: 5s;
-}
-
-.content-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    font-size: 2rem;
     background-color: rgb(27, 6, 41);
-    animation: fade-out 0.75s ease-in forwards;
-    animation-delay: 4.25s;
+  }
+
+.displayOff{
+    display: none;
+}
+  
+.logoAnimatione{
+    opacity: 0;
+    transform: scale(0);
 }
 
-.picture{
-    position: absolute;
-    transform-origin: calc((120px  / 2) + 10px) calc((120px  / 2) + 20px);
-    img{
-        height: 120px;
-    }
-    animation: spin-to-logo 4.5s ease-in-out forwards;
-}
-
-.text{
-    transform: translateX(80px);
+.textAnimationMask{
     overflow: hidden;
-    img{
-        height: 75px;
-        transform: translateX(-220px);
-        animation: fade-text-in 4.5s ease-in forwards;
-    }
+    scale: (2);
 }
 
-@keyframes spin-to-logo {
-    0%{
-        opacity: 0;
-    }
-    10%{
-        opacity: 1;
-    }
-    15%{
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(720deg);
-    }
-    60%{
-        transform: translateX(0px);
-    }
-    70%{
-        transform: translateX(-100px);
-    }
-    90%{
-        opacity: 1;
-        transform: translateX(-100px);
-    }
-    100%{
-        opacity: 0;
-        transform: translateX(-100px);
-    }
+.textAnimation{
+    opacity: 0;
+    transform-origin:left;
 }
-
-@keyframes fade-text-in {
-    0%{
-        opacity: 0;
-    }
-    70%{
-        transform: translateX(-220px);
-    }
-    80%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-    90%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-    100%{
-        opacity: 0;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes fade-out {
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0; 
-    }
-}
-
-@keyframes display-off{
-    from{
-        display: flex;
-    }
-    to{
-        display: none;
-    }
-}
-
-
-

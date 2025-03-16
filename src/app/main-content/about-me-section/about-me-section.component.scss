@@ -8,3 +8,55 @@
     flex-direction: column;
     min-height: 100dvh;
 }
+
+.about-me-navi{
+    display: flex;
+    justify-content: center;
+    ul{
+        display: flex;
+    }
+
+    li{
+        margin-right: 16px;
+        padding: 12px 16px;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        background-color: transparent;
+        position: relative;
+        width: 48px;
+        height: 48px;
+        flex-grow: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        color: var(--grey);
+
+        &::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 3px; 
+            border-radius: 21px;
+            background: linear-gradient(45deg, var(--pink), var(--red)); 
+            -webkit-mask: 
+              linear-gradient(white, white) content-box, 
+              linear-gradient(white, white);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        &:hover{
+            cursor: pointer;
+            color: var(--white);
+        }
+    }
+}
+
+.about-me-navi li.active{
+    color: var(--white);
+}

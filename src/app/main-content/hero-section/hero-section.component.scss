@@ -30,78 +30,64 @@ p{
 .animation-picture-container{
     display: flex;
     position: absolute;
-    top: 112px;
+    top: 78px;
     width: 600px;
-    right: 0px;
+    right: 15px;
     height: 700px;
 
 }
 
-.element-left-top{
-    position: absolute;
-    z-index: 2;
+.element{
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 10px;
-    top:205px;
-    animation: flow 6s ease-in infinite;
-    animation-delay: 1s;
     filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
+    position: absolute;
+    z-index: 2;
+    animation: flow 4.75s ease-in infinite;
+}
+
+.element-left-top{
+    left:-20px;
+    top:255px;
+    animation-duration: 7;
+    animation-delay: 1.3s;
 }
 
 .element-left-down{
-    position: absolute;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 30px;
-    bottom: -70px;
-    animation: flow 6s ease-in infinite;
-    filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
+    z-index: 2;
+    left: -15px;
+    bottom: -68px;
+    animation-duration: 5s;
+    animation-delay: 0s;
 }
 
 .element-right-top{
-    position: absolute;
     z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     right: 120px;
     top: 95px;
-    animation: flow 7s ease-in infinite;
-    filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
+    animation-duration: 8s;
+    animation-delay: 0s;
 }
 
 .element-right-down{
-    position: absolute;
     z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 120px;
-    bottom: 95px;
-    animation: flow 6.5s ease-in infinite;
+    right: 180px;
+    bottom: 55px;
+    animation-duration: 9s;
     animation-delay: 0.5s;
-    filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
 }
 
 .picture{
     z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: clamp(300px, 40vw, 600px);
-    position: absolute;
-    top: 0px;
-    right: 96px;
+    width: clamp(300px, 40vw, 556px);
+    top: 70px;
+    right: 156px;
     img{
         max-width: 600px;
         width: 100%;
-        filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
     }
-    animation: slide 6s ease-in-out infinite;
+    animation: slide 8s ease-in-out infinite;
 }
 
 .category{
@@ -243,7 +229,7 @@ icon{
 
 
     50%{
-        transform: translateY(25px);
+        transform: translateY(15px);
     }
 
 
@@ -254,15 +240,15 @@ icon{
 
 @keyframes slide{
     0%{
-        transform: translateY(15px);
+        transform: translateY(0px);
     }
 
     50%{
-        transform: translateY(35px);
+        transform: translateY(30px);
     }
 
     100%{
-        transform: translateY(15px);
+        transform: translateY(0px);
     }
 }
 

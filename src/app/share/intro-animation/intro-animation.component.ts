@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { loginAnimtion } from './gsap-intro-animation';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-intro-animation',
@@ -8,22 +13,27 @@ import { CommonModule } from '@angular/common';
   styleUrl: './intro-animation.component.scss'
 })
 export class IntroAnimationComponent {
-  isAnimation:boolean = false
 
-  ngOnInit(){
-    this.checkAnimation()
+  @ViewChild('animationScreen') title!:ElementRef | undefined
+  
+  checkSessionStorageForAnimation():boolean{
+    const isAnimation = JSON.parse(sessionStorage.getItem("alreadyAnimation") || "false")
+    if(!isAnimation) {
+      sessionStorage.setItem("alreadyAnimation", "true")
+      return false
+     }
+    if(isAnimation) return true
+    return false
   }
 
-  checkAnimation(){
-    this.isAnimation = JSON.parse(sessionStorage.getItem("alreadyAnimation") || "false")
-    if(this.isAnimation) return
-    if(!this.isAnimation){
-      sessionStorage.setItem("alreadyAnimation", "true")
-      document.body.classList.add('no-scroll')
-      setTimeout(() => {
-        document.body.classList.remove('no-scroll')  
-      }, 5000)
+  ngAfterViewInit() {
+    const isAnimation = this.checkSessionStorageForAnimation()
+    console.log(isAnimation)
+    if(isAnimation){
+      this.title?.nativeElement.classList.add("displayOff")
+      return
     }
+    loginAnimtion();
   }
 
 

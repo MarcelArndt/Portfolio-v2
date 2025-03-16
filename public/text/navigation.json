@@ -1,0 +1,20 @@
+{
+    "german":{
+        "titles":[
+            "Über Mich",
+            "Skills",
+            "Portfolio",
+            "Kontakt",
+            "DE"
+        ]
+    },
+    "english":{
+        "titles":[
+            "About Me",
+            "Skills",
+            "Portfolio",
+            "Contact",
+            "ENG"
+        ]
+    }
+}

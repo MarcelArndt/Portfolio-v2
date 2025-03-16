@@ -7,13 +7,15 @@
         <h2>About Me</h2>
         <p>Hi, I’m a german speaking Frontend Developer based in Bad Salzuflen. Motivated by the limitless possibilities in IT, I am enthusiastic about designing visually appealing and intuitive websites and applications.</p>
         <hr>
-        <nav>
+        <nav  class="about-me-navi"> 
+            
             <ul>
-                <li><icon>mobil</icon></li>
-                <li><icon></icon></li>
-                <li><icon></icon></li>
-                <li><icon></icon></li>
+                <li (click)="swicthCurrentNaviValue(0)">Me</li>
+                <li (click)="swicthCurrentNaviValue(1)"><icon>lightbulb</icon></li>
+                <li (click)="swicthCurrentNaviValue(2)"><icon>location_on</icon></li>
+                <li (click)="swicthCurrentNaviValue(3)"><icon>toys_and_games</icon></li>
             </ul>
+
         </nav>
         <div><h3>Story</h3>Thanks to my flexible working style, I am able to work efficiently both on-site in Bad Salzuflen, Bielefeld, and the surrounding areas, as well as remotely.</div>
         <div><h3>Flexibility</h3>I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.</div>

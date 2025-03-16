@@ -11,4 +11,15 @@ export class ConfigService {
   linkIn = "https://www.linkedin.com/in/profil-marcel-arndt/"
   email = "info@arndt-marcel.de"
 
+  backgroundForPacman = "./backgrounds/maze.jpg"
+
+  PathForText = {
+    "heroSection" : "./text/hero-section.json",
+    "aboutMeSection" : "./text/about-me-section.json",
+    "navigation" : "./text/navigation.json",
+    "pacman" : "./text/pacman.json"
+  }
+
+
+
 }

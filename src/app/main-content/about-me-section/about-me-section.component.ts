@@ -9,4 +9,15 @@ import { IconComponent } from '../../share/icon/icon.component';
 })
 export class AboutMeSectionComponent {
 
+  currentNaviValue:number = 0
+
+  swicthCurrentNaviValue(newNaviValue:number = 0){
+    this.currentNaviValue = newNaviValue;
+  }
+
+  
+
+
+
+
 }

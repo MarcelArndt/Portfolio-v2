@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
 import { IconComponent } from '../../share/icon/icon.component';
 import { ConfigService } from '../../config.service';
+import { TextService } from '../../text.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'hero-section',
-  imports: [IconComponent],
+  imports: [IconComponent, CommonModule],
   templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.scss'
+  styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent {
-  constructor (public config:ConfigService ){}
+  constructor (public config:ConfigService, public textService: TextService ){}
+
+  async ngOnInit(){
+    await this.loadText()
+  }
+
+  async loadText(){
+
+  }
+
 }
