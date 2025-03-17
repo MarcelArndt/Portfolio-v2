@@ -1,26 +1,43 @@
-<div class="wrapper">
+<div class="wrapper-about-me" *ngIf="textSertvice.texte$ | async as text">
 
     <div class="decoration-middle"><img src="./site-elements/white-middle-element.png"></div>
     <div class="decoration-right"><img src="./site-elements/pink-element.png"></div>
 
     <div class="wrapper-delimiter">
-        <h2>About Me</h2>
-        <p>Hi, I’m a german speaking Frontend Developer based in Bad Salzuflen. Motivated by the limitless possibilities in IT, I am enthusiastic about designing visually appealing and intuitive websites and applications.</p>
-        <hr>
-        <nav  class="about-me-navi"> 
-            
-            <ul>
-                <li (click)="swicthCurrentNaviValue(0)">Me</li>
-                <li (click)="swicthCurrentNaviValue(1)"><icon>lightbulb</icon></li>
-                <li (click)="swicthCurrentNaviValue(2)"><icon>location_on</icon></li>
-                <li (click)="swicthCurrentNaviValue(3)"><icon>toys_and_games</icon></li>
-            </ul>
 
-        </nav>
-        <div><h3>Story</h3>Thanks to my flexible working style, I am able to work efficiently both on-site in Bad Salzuflen, Bielefeld, and the surrounding areas, as well as remotely.</div>
-        <div><h3>Flexibility</h3>I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.</div>
-        <div><h3>Challenge</h3>In my profession, programming isn't just about writing code - it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life</div>
-        <div><h3>Solution-Focused</h3>In my profession, programming isn't just about writing code - it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life</div>
+        <h2 class="headlineOne">{{text?.["aboutMeSection"]?.["titles"]?.[0]}}</h2>
+
+        <div class="triggerOne"></div>
+
+        <!--
+        <div class="polygon polygon-left-top"><img src="./about-me/Polygon 26.png"></div>
+        <div class="polygon polygon-right-top"><img src="./about-me/Polygon 28.png"></div>
+        <div class="polygon polygon-right-bottom"><img src="./about-me/Polygon 27.png"></div>
+        -->
+
+        <content class="content">
+
+                <div class="textBoxOne">
+                    <h3 class="headlineTwo">{{text?.["aboutMeSection"]?.["titles"]?.[1]}}</h3>
+                    <p class="bold text">{{text?.["aboutMeSection"]?.["titles"]?.[2]}}</p>
+                    <p >{{text?.["aboutMeSection"]?.["texte"]?.[0]}}</p>
+                </div>
+                <div class="triggerTwo"></div>
+            
+                <p class="textBoxTwo">{{text?.["aboutMeSection"]?.["texte"]?.[1]}}</p>
+
+                <p class="textBoxThree">{{text?.["aboutMeSection"]?.["texte"]?.[3]}}</p>
+                <p class="textBoxFour">{{text?.["aboutMeSection"]?.["texte"]?.[4]}}</p>
+
+                <nav class="about-me-navi">  
+                    <ul>
+                        <li><icon>lightbulb</icon></li>
+                        <li><icon>location_on</icon></li>
+                        <li><icon>toys_and_games</icon></li>
+                    </ul>
+                </nav>
+        </content>
+
     </div>
 </div>
 

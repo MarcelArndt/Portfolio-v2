@@ -13,13 +13,9 @@
 }
 
 .left-container{
-    min-height: 100dvh;
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    min-width: calc(100dvh - 94px);
     box-sizing: border-box;
-    padding: 24vh 0px 8vh 112px;
+    padding: 94px 0px 0px 112px;
 }
 
 p{
@@ -27,68 +23,6 @@ p{
     margin-bottom: 16px;
 }
 
-.animation-picture-container{
-    display: flex;
-    position: absolute;
-    top: 78px;
-    width: 600px;
-    right: 15px;
-    height: 700px;
-
-}
-
-.element{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
-    position: absolute;
-    z-index: 2;
-    animation: flow 4.75s ease-in infinite;
-}
-
-.element-left-top{
-    left:-20px;
-    top:255px;
-    animation-duration: 7;
-    animation-delay: 1.3s;
-}
-
-.element-left-down{
-    z-index: 2;
-    left: -15px;
-    bottom: -68px;
-    animation-duration: 5s;
-    animation-delay: 0s;
-}
-
-.element-right-top{
-    z-index: 3;
-    right: 120px;
-    top: 95px;
-    animation-duration: 8s;
-    animation-delay: 0s;
-}
-
-.element-right-down{
-    z-index: 3;
-    right: 180px;
-    bottom: 55px;
-    animation-duration: 9s;
-    animation-delay: 0.5s;
-}
-
-.picture{
-    z-index: 2;
-    width: clamp(300px, 40vw, 556px);
-    top: 70px;
-    right: 156px;
-    img{
-        max-width: 600px;
-        width: 100%;
-    }
-    animation: slide 8s ease-in-out infinite;
-}
 
 .category{
     display: flex;
@@ -133,7 +67,14 @@ p{
     }
 }
 
+profilpicture{
+   position: absolute;
+   right: 112px;
+   top:30px;
+}
+
 .links{
+    margin-top: 64px;
     font-size: 18px;
 }
 
@@ -182,7 +123,7 @@ icon{
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 56px;
+    bottom: 48px;
     box-sizing: border-box;
     padding-bottom: 32px;
     height: max-content;
@@ -219,36 +160,6 @@ icon{
         border-width: 12px 10px 0 10px;
         border-color: var(--grey) transparent transparent transparent;
         animation: moving-down 1.5s ease-in-out infinite;
-    }
-}
-
-@keyframes flow {
-    0%{
-        transform: translateY(0px);
-    }
-
-
-    50%{
-        transform: translateY(15px);
-    }
-
-
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-@keyframes slide{
-    0%{
-        transform: translateY(0px);
-    }
-
-    50%{
-        transform: translateY(30px);
-    }
-
-    100%{
-        transform: translateY(0px);
     }
 }
 
@@ -292,14 +203,20 @@ icon{
 }
 
 @media (max-width:1860px){
-    .animation-picture-container{
+    profilpicture{
         display: none;
     }
 
     .left-container{
+        min-width: auto;
         width: 100%;
-        padding: 20vh 0px 8vh 0px;
+        padding: 94px 0px 94px 0px;
         transition: padding 0.5s ease-in;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 100dvh;
     }
 
     .main-container{
@@ -309,6 +226,7 @@ icon{
         align-items: center;
         justify-items: center;
         flex-direction: column;
+
 
         .category-button{
              margin: 0px 0px;
@@ -322,9 +240,10 @@ icon{
     }
 
     .links{
+        margin-top: 0px;
         text-align: center;
-        padding-bottom: 72px;
         position: relative;
+        padding-bottom: 16px;
 
         ul{
             width: 100%;
@@ -336,18 +255,6 @@ icon{
             margin: 0px 24px;
             transition: margin 0.25s ease-in;
         }
-
-        &::before{
-            opacity: 1;
-            content: "";
-            position: absolute;
-            top: -16px;
-            width: 160px;
-            height: 2px;
-            background-color: var(--grey);
-            left: calc((100% - 160px) / 2);
-            transition: opacity 1s ease-in;
-        }
     }
 }
 
@@ -355,13 +262,14 @@ icon{
     .left-container{
         padding: 33vh 0px 8vh 0px;
         transition: all 1s ease-in;
-    }
-
-    .links{
-        &::before{
-            opacity: 0;
-            transition: opacity 1s ease-in;
-        }
+        width: 100%;
+        padding: 94px 0px 94px 0px;
+        transition: padding 0.5s ease-in;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100dvh;
     }
 
 }

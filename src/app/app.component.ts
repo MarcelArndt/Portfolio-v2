@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
 import { TextService } from './text.service';
-import { ConfigService } from './config.service';
-
 
 @Component({
   selector: 'app-root',

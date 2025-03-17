@@ -59,13 +59,14 @@ nav{
     }
 
     .navigation-icon{
+        margin-left: 16px;
         user-select: none;
         margin-top: 4px;
         position: relative;
         font-size: 36px;
         display: none;
         align-items: center;
-        justify-content: center;
+
         &:hover{ 
             cursor: pointer;
             color: var(--pink);

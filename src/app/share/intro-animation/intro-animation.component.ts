@@ -1,10 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { loginAnimtion } from './gsap-intro-animation';
-
-gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-intro-animation',
@@ -28,7 +24,6 @@ export class IntroAnimationComponent {
 
   ngAfterViewInit() {
     const isAnimation = this.checkSessionStorageForAnimation()
-    console.log(isAnimation)
     if(isAnimation){
       this.title?.nativeElement.classList.add("displayOff")
       return

@@ -1,0 +1,80 @@
+.animation-picture-container{
+    display: flex;
+    position: relative;
+    max-height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: max-content;
+}
+
+.element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    animation: flow 4.75s ease-in infinite;
+}
+
+.element-left-top{
+    left:80px;
+    top:164px;
+    animation-duration: 8s;
+    animation-delay: 1.25s;
+}
+
+.element-left-down{
+    left: 55px;
+    bottom: -16px;
+    animation-duration: 7s;
+    animation-delay: 0s;
+}
+
+.element-right-down{
+    right: 10px;
+    bottom: 135px;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.picture{
+    position: relative;
+    width: clamp(300px, 40vw, 556px);
+    img{
+        max-width: 600px;
+        width: 100%;
+    }
+    animation: slide 6.3s ease-in-out infinite;
+    animation-delay: 0.25s;
+    filter: drop-shadow(0 4px 6px rgb(9, 0, 47));
+}
+
+@keyframes flow {
+    0%{
+        transform: translateY(0px);
+    }
+
+
+    50%{
+        transform: translateY(15px);
+    }
+
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slide{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(30px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}

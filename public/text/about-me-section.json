@@ -2,33 +2,30 @@
     "german":{
         "titles":[
             "Über Mich",
-            "Wer bin ich",
-            "Flexibilität",
-            "Herausforderung",
-            "Lösungsorientiert"
+            "Hey, ich bin Marcel Arndt",
+            "Wer bin ich und was zeichnet mich aus?"
+
         ],
         "texte":[
-            "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus Bad Salzuflen. Motiviert von den grenzenlosen Möglichkeiten in der IT bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.",
-            "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus Bad Salzuflen. Motiviert von den grenzenlosen Möglichkeiten in der IT bin ich begeistert von der Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.",
-            "Durch meine flexible Arbeitsweise bin ich in der Lage, sowohl vor Ort in Bad Salzuflen, Bielefeld und Umgebung als auch remote effizient zu arbeiten.",
-            "Ich bin aufgeschlossen und suche immer nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
-            "Programmieren ist mehr als nur Code schreiben – es ist kreative Problemlösung. Meine Aufgabe ist es, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln, um Ihre Ziele zu erreichen und Ihre Visionen zu verwirklichen."
+            "Ich bezeichne mich selbst als Frontend- sowie Backend-Entwickler aus Bad Salzuflen (NRW).",
+            "Für mich ist Programmieren weit mehr als nur das Schreiben von Code. Es ist wie Kochen – eine kreative Kunst, bei der verschiedene Komponenten harmonisch zusammenspielen, um etwas Neues und Einzigartiges zu erschaffen.",
+            "Eine selbstgemachte Web-App oder ein leckeres Chili sind für mich die perfekten Symbole für Erfolg, die mich stets vorantreiben und motivieren.",
+            "In den letzten Jahren habe ich über 14 Projekte erfolgreich umgesetzt und mir dadurch einen wertvollen Wissensschatz sowie einen soliden Tech-Stack aufgebaut. Diese Erfahrungen ermöglichen es mir, neue Herausforderungen souverän zu meistern.",
+            "Ich liebe es, mich neuen Herausforderungen zu stellen und durch ehrliches Feedback stetig zu wachsen. Denn nur durch kontinuierliche Weiterentwicklung und offene Kommunikation entsteht echter Fortschritt."
         ]
     },
     "english":{
         "titles":[
-            "Über Mich",
-            "Wer bin ich",
-            "Flexibilität",
-            "Herausforderung",
-            "Lösungsorientiert"
+            "About me",
+            "Hey, I'am Marcel Arndt",
+            "Who am I and what defines me?"
         ],
         "texte":[
-            "Hi, I'm a german speaking Frontend Developer based in Bad Salzuflen. Motivated by the limitless possibilities in IT, I am enthusiastic about designing visually appealing and intuitive websites and applications.",
-            "Hi, I'm a german speaking Frontend Developer based in Bad Salzuflen. Motivated by the limitless possibilities in IT, I am enthusiastic about designing visually appealing and intuitive websites and applications.",
-            "Thanks to my flexible working style, I am able to work efficiently both on-site in Bad Salzuflen, Bielefeld, and the surrounding areas, as well as remotely.",
-            "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
-            "In my profession, programming isn't just about writing code - it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
+            "I consider myself a frontend and backend developer from Bad Salzuflen (NRW).",
+            "For me, programming is much more than just writing code. It's like cooking – a creative art where different components harmoniously come together to create something new and unique.",
+            "A self-made web app or a delicious chili are, in my eyes, the perfect symbols of success that constantly drive and motivate me.",
+            "Over the past few years, I have successfully completed more than 14 projects, building a valuable knowledge base and a solid tech stack. These experiences allow me to confidently tackle new challenges.",
+            "I love taking on new challenges and growing through honest feedback. Because true progress only comes through continuous development and open communication."
         ]
     }
 }

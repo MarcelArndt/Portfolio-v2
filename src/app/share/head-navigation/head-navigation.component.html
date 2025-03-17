@@ -9,6 +9,10 @@
                 <a href="#start"><li>{{texte?.['navigation']?.['titles']?.[2]}} </li></a>
                 <a href="#start"><li>{{texte?.['navigation']?.['titles']?.[3]}} </li></a>
             </ul>
+            <div class="language" (click)="textService.switchLanguage(textService.currentLanguage[1])">
+                <p>{{texte?.['navigation']?.['titles']?.[4]}}</p>
+                <icon>language</icon>
+            </div>
 
             <div class="navigation-icon" (click)="menu.preventClick($event); menu.toggleMenu();">
                 <icon>menu</icon>
@@ -22,10 +26,6 @@
                     </ul>
                 </menu>
 
-            </div>
-            <div class="language" (click)="textService.switchLanguage(textService.currentLanguage[1])">
-                <p>{{texte?.['navigation']?.['titles']?.[4]}}</p>
-                <icon>language</icon>
             </div>
 
         </nav>

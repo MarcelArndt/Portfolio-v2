@@ -3,10 +3,11 @@ import { IconComponent } from '../../share/icon/icon.component';
 import { ConfigService } from '../../config.service';
 import { TextService } from '../../text.service';
 import { CommonModule } from '@angular/common';
+import { ProfilpictureComponent } from '../../share/profilpicture/profilpicture.component';
 
 @Component({
   selector: 'hero-section',
-  imports: [IconComponent, CommonModule],
+  imports: [IconComponent, CommonModule, ProfilpictureComponent],
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss']
 })
