@@ -62,27 +62,18 @@ app-pacman-area{
 }
 
 .boxOne{
-    position: absolute;
-    right: 0px;
-    top: 0px;
     animation: flow ease-in-out infinite;
     animation-delay:1s;
     animation-duration: 9s;
 }
 
 .boxTwo{
-    position: absolute;
-    right: 180px;
-    top: 110px;
     animation: flow ease-in-out infinite;
     animation-delay:0s;
     animation-duration: 8s;
 }
 
 .boxThree{
-    position: absolute;
-    right: 60px;
-    top: 195px;
     animation: flow ease-in-out infinite;
     animation-delay:0s;
     animation-duration: 9s;
@@ -127,6 +118,10 @@ app-pacman-area{
     opacity: 0;
     transform: translate(0px, -30px);
 
+    &:hover{
+        scale: (105%);
+    }
+
     &::before{
         content: attr(data-name);
         z-index: 10;
@@ -153,11 +148,6 @@ app-pacman-area{
         transform: translateY(-5px);
         transition: transform ease-in 0.125s,  opacity ease-in 0.125s;
     }
-
-    &:hover{
-        scale: (105%);
-    }
-
 
     img{ 
         flex-grow: 0;
@@ -265,6 +255,30 @@ article{
         text-align: center;
     }
 
+}
+
+.box{
+    position: absolute;
+    opacity: 0;
+}
+
+.boxAnimtionOne{
+    right: 0px;
+    top: 0px;
+    transform: translate(500px, -300px);
+}
+
+.boxAnimtionTwo{
+    right: 195px;
+    top: 105px;
+    transform: translate(-100px, -300px);
+
+}
+
+.boxAnimtionThree{
+    right: 60px;
+    top: 200px;
+    transform: translate(100px, 200px);
 }
 
 
