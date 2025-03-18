@@ -27,7 +27,6 @@
     width: 100%;
     position: relative;
     padding: 0px 112px;
-
 }
 
 .mobil-logo{
@@ -98,7 +97,7 @@ nav{
             height: 100%;
             inset: 0;
             padding: 2px; 
-            border-radius: 16px;
+            border-radius: 14px;
             background: linear-gradient(45deg, var(--pink), var(--red)); 
             -webkit-mask: 
               linear-gradient(white, white) content-box, 
@@ -122,10 +121,10 @@ nav{
     align-items: center;
     justify-content: center;
     border-radius: 32px;
-    border: 2px solid var(--grey);
+    border: 2px solid var(--white);
     padding: 4px 12px;
     position: relative;
-    color: var(--grey);
+    color: var(--white);
 
     p{
         font-weight: 400;
@@ -175,7 +174,6 @@ nav{
 
 @media(max-width: 416px){
     .wrapper-delimiter{
-
 
         .logo{
             display: none;

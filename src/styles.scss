@@ -14,9 +14,13 @@
     --grey :  #2E3455;
     --purble: #1C0018;
     --dark-pink: #33004d;
+    --blueberry: #1C0018;
     --pink : #BB00FF;
     --red : #ED043E;
-    --normal-text-size: #{clamp(1rem, 2vw, 1.5rem)};
+    --blue: #2641db;
+    --blue-gradient: linear-gradient(15deg, rgb(75, 0, 187) 0%, rgb(134, 30, 232) 100%);
+    --pink-gradient: linear-gradient(15deg, var(--pink) 0%, var(--red) 100%);
+    --normal-text-size: #{clamp(1rem, 2vw, 1.3125rem)};
     --icon-size: 1.25rem;
     --h1-size: #{clamp(2.5rem, 10vw, 7.5rem)};
     --h2-size: #{clamp(2.5rem, 6vw, 5rem)};
@@ -81,7 +85,6 @@ h2 {
     color: transparent;
     -webkit-background-clip: text;
     display: inline-block;
-    width: max-content;
     font-weight: 350;
     font-size: var(--h2-size);
     margin-block-start: 0em;
@@ -89,6 +92,10 @@ h2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     margin-bottom: 24px;
+    word-break: normal;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: max-content;
 }
 
 h3{
@@ -115,6 +122,39 @@ icon{
 
 .bold{
     font-weight: 500;
+}
+
+.button{
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-color: transparent;
+    position: relative;
+    padding: 16px 36px 12px 36px; 
+    min-width: 130px;
+    max-width: max-content;
+    display: flex;
+    justify-content: center;
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        padding: 2px; 
+        border-radius: 14px;
+        background: linear-gradient(45deg, var(--pink), var(--red)); 
+        -webkit-mask: 
+          linear-gradient(white, white) content-box, 
+          linear-gradient(white, white);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+
+    &:hover{
+        cursor: pointer;
+        scale: (105%);
+    }
 }
 
 .decoration-middle{

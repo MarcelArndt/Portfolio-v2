@@ -1,1 +1,79 @@
-<p>skills-section works!</p>
+<div class="wrapper-skills" *ngIf="textService.texte$ | async as text" [ngStyle]="{'background-image': urlBackgroundSkills}">
+    
+    <div class="decoration-middle"><img src="./skills/bottom-pink-element.png"></div>
+    <div class="decoration-right"><img src="./site-elements/pink-element.png"></div>
+
+            <div class="pacman-box"> 
+
+                <div class="pacman-space" id="pacman">
+                    <div class="pacman-container"><div class="ghost pacman" ></div></div>
+                    <div class="pacman-gap"></div>
+                    <div class="ghost"><img src="./skills/pacman/ghost.png"></div>
+                    <div class="ghost"><img src="./skills/pacman/ghost.png"></div>
+                    <div class="ghost"><img src="./skills/pacman/ghost.png"></div>
+                </div>
+
+            </div>
+
+            
+
+
+
+    <div class="wrapper-delimiter">
+
+        <div class="text-box" id="textbox">
+            <div class="text-box-content">
+                <h2>{{text?.["pacman"]?.["title"]}}</h2>
+                <p>{{text?.["pacman"]?.["text"]}}</p>
+            </div>
+        </div>
+
+        
+    <div class="deko-box">
+        <div class="boxOne"><img src="./skills/icon.png"></div>
+        <div class="boxTwo"><img src="./skills/ball.png"></div>
+        <div class="boxThree"><img src="./skills/ball-small.png"></div>
+    </div>
+
+        <h2 class="skillsHeadline">{{text?.["skills"]?.["titles"]?.[0]}}</h2>
+
+        <div class="content-box">
+
+            <article class="artcileLeft">
+                {{text?.["skills"]?.["texte"]?.[0]}}
+            </article>
+
+            <article class="artcileRight">
+                <div>
+                    <p class="bold">{{text?.["skills"]?.["titles"]?.[1]}}</p>
+                    {{text?.["skills"]?.["texte"]?.[1]}}
+                </div>
+                <div class="button">{{text?.["skills"]?.["button"]}}</div>
+            </article>
+
+        </div>
+
+        <p class="bold skillString">
+            {{text?.["skills"]?.["titles"]?.[2]}}
+        </p>
+
+        <div class="icon-container">
+            <div class="skillIcon" data-name="Angular"><img src="./skills/icons/angular.svg"></div>
+            <div class="skillIcon" data-name="Django"><img src="./skills/icons/django.svg"></div>
+            <div class="skillIcon" data-name="Python"><img src="./skills/icons/python.svg"></div>
+            <div class="skillIcon" data-name="TypeScript"><img src="./skills/icons/typescript.svg"></div>
+            <div class="skillIcon" data-name="JavasScript"><img src="./skills/icons/javascript.svg"></div>
+            <div class="skillIcon" data-name="HTML5"><img src="./skills/icons/html.svg"></div>
+            <div class="skillIcon" data-name="CSS3"><img src="./skills/icons/css.svg"></div>
+            <div class="skillIcon" data-name="SASS"><img src="./skills/icons/sass.svg"></div>
+            <div class="skillIcon" data-name="Photoshop"><img src="./skills/icons/photoshop.svg"></div>
+            <div class="skillIcon" data-name="Illustrator"><img src="./skills/icons/illustrator.svg"></div>
+            <div class="skillIcon" data-name="Figma"><img src="./skills/icons/figma.svg"></div>
+            <div class="skillIcon" data-name="Git & GitHub"><img src="./skills/icons/git.svg"></div>
+        </div>
+
+    </div>
+</div>
+
+
+

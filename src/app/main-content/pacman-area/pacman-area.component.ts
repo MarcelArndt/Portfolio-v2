@@ -18,19 +18,19 @@ export class PacmanAreaComponent {
   @ViewChild("spaceForPoints") elementForSpace!:ElementRef | undefined;;
 
   pointsArray:string[]= []
-  amountOfPointsInSpace:number = 0
-  spaceBetweenPoints:number = 96
-  sizeOfPoints:number = 36
-  ratioForUseSpace:number = 0.75
-  pacmanSize = 100
-  pathForBackground:string = ""
+  amountOfPointsInSpace:number = 0;
+  spaceBetweenPoints:number = 96;
+  sizeOfPoints:number = 36;
+  ratioForUseSpace:number = 0.75;
+  pacmanSize = 100;
+  pathForBackground:string = "";
   
 
   @HostListener('window:resize', ['$event'])
     calculateWindowSize(){
       const element = this.elementForSpace?.nativeElement || null
-      const currenWindowWidth = element?.offsetWidth
-      this.amountOfPointsInSpace = Math.floor((currenWindowWidth - this.pacmanSize) / (this.sizeOfPoints + this.spaceBetweenPoints));
+      const currenWindowWidth = element?.offsetWidth || 0
+      this.amountOfPointsInSpace = Math.floor((currenWindowWidth - this.pacmanSize) / (this.sizeOfPoints + this.spaceBetweenPoints)) || 0;
       this.pointsArray = new Array(this.amountOfPointsInSpace);
   }
 

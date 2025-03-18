@@ -6,6 +6,11 @@
             "Portfolio",
             "Kontakt",
             "DE"
+        ],
+        "footer":[
+           "Start",
+           "Datenschutz",
+           "Impressum"
         ]
     },
     "english":{
@@ -15,6 +20,11 @@
             "Portfolio",
             "Contact",
             "ENG"
+        ],
+        "footer":[
+           "Start",
+           "Data-Protection",
+           "Imprint"
         ]
     }
 }

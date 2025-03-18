@@ -1,0 +1,28 @@
+{
+    "german":{
+        "titles":[
+            "Meine Skills",
+            "Auf der Suche nach anderen Skills?",
+            "Skills, Tools, und Technologien die ich benutze:"
+        ],
+
+        "texte":[
+           "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Technologien und Konzepten eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.",
+           "Nehmen Sie gerne Kontakt mit mir auf. Ich freue mich darauf, meine bisherigen Kenntnisse zu erweitern."
+        ],
+       "button":"Kontaktiere mich"
+    },
+    "english":{
+        "titles":[
+            "My Skills",
+            "Looking for another skill?",
+            "Skills, Tools, and Technologies I use:"
+        ],
+
+        "texte":[
+           "My journey has involved working on many projects, employing a range of technologies and concepts. I am open to learn new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
+           "Feel free to contact me. I look forward to expanding on my previous knowledge."
+        ],
+       "button":"Get in touch"
+    }
+}

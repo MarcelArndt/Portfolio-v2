@@ -1,18 +1,19 @@
-<div *ngIf="textService.texte$ | async as text" class="wrapper" [ngStyle]="{'background-image': urlBackground}">
+<div *ngIf="textService.texte$ | async as text" class="wrapper">
     <div class="wrapper-content">
 
 
-        <div class="text-box">
-            <div class="text-box-content">
-                <h2>{{text?.["pacman"]?.["title"]}}</h2>
-                <p>{{text?.["pacman"]?.["text"]}}</p>
+            <div class="text-box">
+                <div class="text-box-content">
+                    <h2>{{text?.["pacman"]?.["title"]}}</h2>
+                    <p>{{text?.["pacman"]?.["text"]}}</p>
+                </div>
             </div>
-        </div> 
+
 
         <div class="pacman-box"> 
             <div class="point-space" #spaceForPoints>
                 <div *ngFor="let point of pointsArray; let i = index" [ngStyle]="{'margin-left': marginInPx, 'margin-right': marginInPx }" class="points">&lt;JS&gt;</div>
-            </div>
+         </div>
 
             <div class="pacman-space">
                 <div class="pacman"></div>

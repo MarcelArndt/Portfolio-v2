@@ -1,0 +1,270 @@
+.wrapper-skills{
+    --skill-icon-size: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 600px;
+        width: 100%;
+        background: rgb(34,4,31);
+        background: linear-gradient(180deg, rgba(34,4,31,1) 0%, rgba(34,4,31,0) 100%);
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 300px;
+        width: 100%;
+        background: rgb(34,4,31);
+        background: linear-gradient(0deg, rgba(34,4,31,1) 0%, rgba(34,4,31,0) 100%);
+    }
+}
+
+.skillsHeadline{
+    opacity: 0;
+    transform: translate(-30px, -100px);
+}
+
+.artcileLeft, .artcileRight, .skillString{
+    opacity: 0;
+}
+
+app-pacman-area{
+    position: absolute;
+    top: 0px;
+
+}
+
+
+.deko-box{
+    z-index: 10;
+    position: absolute;
+    bottom: 150px;
+    left: 150px;
+    display: flex;
+    height: 250px;
+    width: 300px;
+
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.boxOne{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    animation: flow ease-in-out infinite;
+    animation-delay:1s;
+    animation-duration: 9s;
+}
+
+.boxTwo{
+    position: absolute;
+    right: 180px;
+    top: 110px;
+    animation: flow ease-in-out infinite;
+    animation-delay:0s;
+    animation-duration: 8s;
+}
+
+.boxThree{
+    position: absolute;
+    right: 60px;
+    top: 195px;
+    animation: flow ease-in-out infinite;
+    animation-delay:0s;
+    animation-duration: 9s;
+}
+
+.wrapper-delimiter{
+    box-sizing: border-box;
+    padding: 164px 112px 64px 112px;
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.decoration-middle{
+    bottom: -5px !important;
+}
+
+.decoration-right{
+    right: 0px;
+}
+
+.icon-container{
+
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillIcon{
+    width: var(--skill-icon-size);
+    height: var(--skill-icon-size);
+    flex-grow: 0;
+    margin: 48px 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    transform: translate(0px, -30px);
+
+    &::before{
+        content: attr(data-name);
+        z-index: 10;
+        position: absolute;
+        top: -55px;
+        font-size: 18px;
+        white-space: nowrap;
+        background: var(--blue-gradient);
+        opacity: 0;
+        padding: 8px 32px;
+        border-radius: 8px;
+        transform: translateY(10px);
+        pointer-events: none;
+        transition: transform ease-in 0.125s, opacity ease-in 0.125s;
+        font-weight: 500;
+
+    }
+
+    &:hover::before {
+        content: attr(data-name);
+        z-index: 10;
+        color: var(--white);
+        opacity: 1;
+        transform: translateY(-5px);
+        transition: transform ease-in 0.125s,  opacity ease-in 0.125s;
+    }
+
+    &:hover{
+        scale: (105%);
+    }
+
+
+    img{ 
+        flex-grow: 0;
+        width: 100%;
+        max-height: 100%;
+    }
+}
+
+
+.content-box{
+    margin: 0px 0px 32px 0px;
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+
+article{
+    line-height: 140%;
+    height: 100%;
+    max-width: min(50%, 560px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+
+    .bold{
+        margin-bottom: 16px;
+    }
+}
+
+@keyframes flow {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+@media (max-width:1420px){
+
+    .deko-box{
+        display: none;
+    }
+
+    .wrapper-delimiter{
+        padding: 164px 0px 64px 0px;
+        width: 90%;
+    }
+
+    .icon-container{
+        width: 100%;
+    }
+
+    article{
+        width: 45%;
+        max-width: none;
+        min-height: auto;
+    }
+}
+
+@media (max-width:760px){
+    .content-box{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .icon-container{
+        margin-top: 32px;
+        height: max-content;
+    }
+
+    .skillIcon{
+        width: 36px;
+        height: 36px;
+        margin: 24px 21px;
+        transition: margin 1s ease-in-out, height 1s ease-in-out, width 1s ease-in-out;
+
+        &::before{
+            padding: 3px 12px;
+            font-size: 1rem;
+            top:-32px;
+        }
+    }
+
+    article{
+        width: 100%;
+        align-items: center;
+    }
+
+    .button{
+        margin-top: 32px;
+    }
+
+    .bold{
+        text-align: center;
+    }
+
+}
+
+

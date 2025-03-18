@@ -1,1 +1,29 @@
-<p>footer works!</p>
+<div class="wrapper" *ngIf=" textService.texte$ | async as text">
+
+    <div class="wrapper-delimiter">
+
+        <nav>
+            <ul>
+                <li>{{text?.["navigation"]?.["footer"]?.[0]}}</li>
+                <li>{{text?.["navigation"]?.["footer"]?.[1]}}</li>
+                <li>{{text?.["navigation"]?.["footer"]?.[2]}}</li>
+            </ul>
+        </nav>
+    
+        <div class="copyright">        
+            <div class="logo"><img src="./logo/logo-full.png"></div>
+            <p>© Marcel Arndt 2025</p>
+        </div>
+    
+        <div class="links">
+            {{text?.['heroSection']?.['utils']?.[0]}}
+            <ul>
+                <a href="mailto:{{config.email}}"><li><icon>mail</icon></li></a>
+                <a [href]="config.github"><li><icon><i class="fa fa-git"></i></icon></li></a>
+                <a [href]="config.linkIn"><li><icon><i class="fa fa-linkedin"></i></icon></li></a>
+            </ul>
+        </div>
+
+    </div>
+    
+</div>

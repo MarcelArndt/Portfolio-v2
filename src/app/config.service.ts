@@ -17,7 +17,8 @@ export class ConfigService {
     "heroSection" : "./text/hero-section.json",
     "aboutMeSection" : "./text/about-me-section.json",
     "navigation" : "./text/navigation.json",
-    "pacman" : "./text/pacman.json"
+    "pacman" : "./text/pacman.json",
+    "skills" : "./text/skills.json"
   }
 
 
