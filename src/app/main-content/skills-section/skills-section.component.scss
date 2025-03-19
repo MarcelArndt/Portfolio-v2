@@ -42,9 +42,7 @@
 app-pacman-area{
     position: absolute;
     top: 0px;
-
 }
-
 
 .deko-box{
     z-index: 10;
@@ -79,6 +77,30 @@ app-pacman-area{
     animation-duration: 9s;
 }
 
+.box{
+    position: absolute;
+    opacity: 0;
+}
+
+.boxAnimtionOne{
+    right: 0px;
+    top: 0px;
+    transform: translate(500px, -300px);
+}
+
+.boxAnimtionTwo{
+    right: 195px;
+    top: 105px;
+    transform: translate(-100px, -300px);
+
+}
+
+.boxAnimtionThree{
+    right: 60px;
+    top: 200px;
+    transform: translate(100px, 200px);
+}
+
 .wrapper-delimiter{
     box-sizing: border-box;
     padding: 164px 112px 64px 112px;
@@ -89,13 +111,7 @@ app-pacman-area{
     align-items: center;
     justify-content: space-between;
 }
-.decoration-middle{
-    bottom: -5px !important;
-}
 
-.decoration-right{
-    right: 0px;
-}
 
 .icon-container{
 
@@ -155,7 +171,6 @@ app-pacman-area{
         max-height: 100%;
     }
 }
-
 
 .content-box{
     margin: 0px 0px 32px 0px;
@@ -256,29 +271,3 @@ article{
     }
 
 }
-
-.box{
-    position: absolute;
-    opacity: 0;
-}
-
-.boxAnimtionOne{
-    right: 0px;
-    top: 0px;
-    transform: translate(500px, -300px);
-}
-
-.boxAnimtionTwo{
-    right: 195px;
-    top: 105px;
-    transform: translate(-100px, -300px);
-
-}
-
-.boxAnimtionThree{
-    right: 60px;
-    top: 200px;
-    transform: translate(100px, 200px);
-}
-
-

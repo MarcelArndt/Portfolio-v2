@@ -1,10 +1,9 @@
 .wrapper-about-me{
-    overflow: hidden;
     box-sizing: border-box;
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
     min-height: 100dvh;
@@ -12,130 +11,113 @@
     background-color: var(--background);
 }
 
+h2{
+    padding-top: 64px;
+    margin-bottom: 0px;
+}
+
+.headlineOne{
+    opacity: 0;
+    transform: translateY(-300px);
+}
+
 .wrapper-delimiter{
-    position: static;
+    margin-top: 100px;
+    width: 75%;
+    box-sizing: border-box;
+    position: relative;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: clamp(48px, 5vw, 10vw);
+}
+
+profilpicture{
+    scale: 0.9;
+    margin-top: -64px;
+}
+
+.profilPicture{
+    opacity: 0;
+    transform: translate(-200px, -200px);
+}
+
+.content-text-delimiter{
+    z-index: 6;
+    width: 540px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+article{
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 100%;
-    height: 100dvh;
+
+    p{
+        margin: 16px 0px;
+    }
+
+    h3{
+        max-width: 450px;
+        margin-bottom:0px
+    }
+}
+
+.textBoxOne{
+    opacity: 0;
+    transform: translate(100px, -100px);
 }
 
 
-h2{
-    width: 100%;
-    text-align: center;
-    margin-top: 192px;
-    text-align: center;
-}
-
-h3{
-    text-align: center;
-    width: 100%;
-    max-width: auto;
+.textBoxTwo{
+    opacity: 0;
+    transform: translate(100px, -100px);
 }
 
 
-p{
-    margin: 16px 0px;
-    font-size: 1.5rem;
-    line-height: 140%;
-}
-
-.polygon{
+.deko-box{
+    width: 200px;
+    height: 250px;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: flow ease-in-out infinite;
+    top: 50px;
+    right: 10px;
 }
 
-.polygon-left-top{
-    top:60px;
-    left: 60px;
-    animation: flow ease-in-out infinite;
-    animation-delay:2s;
-    animation-duration: 10s;
-}
-
-.polygon-right-top{
-    top:60px;
-    right: 120px;
-    animation-duration: 8s;
-}
-
-.polygon-right-bottom{
-    bottom:0px;
+.boxOne{
+    position: absolute;
+    top: 0px;
     right: 0px;
-    animation-duration: 10s;
 }
 
-.about-me-navi{
-
+.boxTwo{
     position: absolute;
-    bottom: 64px;
-    right: 112px;
-    display: flex;
-    justify-content: center;
-
-    ul{
-        align-items: end;
-        height: 100%;
-        display: flex;
-        width: 100%;
-        gap: clamp(8px, 2vw, 36px);
-    }
-
-    li{
-        margin-right: 16px;
-        padding: 16px 16px;
-        user-select: none;
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        border: 2px solid transparent;
-        background-clip: padding-box;
-        background-color: transparent;
-        position: relative;
-        width: 36px;
-        height: 36px;
-        flex-grow: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 36px;
-        color: var(--grey);
-
-        &::before{
-            content: "";
-            position: absolute;
-            inset: 0;
-            padding: 3px; 
-            border-radius: 18px;
-            background: linear-gradient(45deg, var(--pink), var(--red)); 
-            -webkit-mask: 
-              linear-gradient(white, white) content-box, 
-              linear-gradient(white, white);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-        }
-
-        &:hover{
-            cursor: pointer;
-            color: var(--white);
-        }
-    }
+    top: 55px;
+    left: 0px;
 }
 
-.about-me-navi li.active{
-    color: var(--white);
+.boxThree{
+    position: absolute;
+    top: 95px;
+    right: 0px;
 }
 
+.animationFrameWork{
+    animation: flow 7s ease-in-out infinite;
+}
 
 @keyframes flow {
     0%{
@@ -149,74 +131,48 @@ p{
     }
 }
 
-@media (max-width:1400px){
-
-    .wrapper-delimiter{
-        padding-top: 94px;
-        padding-bottom: 112px;
+@media (max-width: 1420px){
+    .deko-box{
+        display: none;
     }
 
+    profilpicture{
+        scale: 1;
+        margin-top: +64px;
+    }
 
-    h3{
-        max-width: 100%;
+    content{
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        justify-content: center;
     }
 
-    p{
-        z-index: 5;
-        font-size: clamp(1.125rem, 2vw, 1.5rem);
+    article{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        max-width: 540px;
     }
 
-    .about-me-navi{
-        ul{
-            justify-content: center;
-            align-items: center;
-        }
-    }
-}
-
-.textBoxOne, .textBoxTwo, .textBoxThree, .textBoxFour, .textBoxFive {
-    width: 550px;
-    position: absolute;
-    opacity: 0;
-    top: 50%;
-    left: calc((100% - 550px) / 2); 
-    transform: translate(-50%, -50%); 
-    text-align: center;
-  }
-
-.headlineOne{
-    opacity: 0;
-    transform: translateY(-200px);
-}
-
-.textBoxOne{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateX(-300px);
-    p{
+    .content-text-delimiter{
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        flex-direction: column;
+    }
+
+    .textBoxOne{
+       margin-bottom: 64px;
+    }
+
+    .textBoxTwo{
+        padding-bottom: 64px;
     }
 }
 
-.textBoxTwo{
-    opacity: 0;
-    transform: translateX(300px);
-}
 
-.textBoxThree{
-    opacity: 0;
-    transform: translateX(-300px);
-}
-
-.textBoxFour{
-    opacity: 0;
-    transform: translateX(300px);
-}
 

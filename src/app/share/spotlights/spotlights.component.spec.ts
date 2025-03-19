@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PacmanAreaComponent } from './pacman-area.component';
+import { SpotlightsComponent } from './spotlights.component';
 
-describe('PacmanAreaComponent', () => {
-  let component: PacmanAreaComponent;
-  let fixture: ComponentFixture<PacmanAreaComponent>;
+describe('SpotlightsComponent', () => {
+  let component: SpotlightsComponent;
+  let fixture: ComponentFixture<SpotlightsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PacmanAreaComponent]
+      imports: [SpotlightsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PacmanAreaComponent);
+    fixture = TestBed.createComponent(SpotlightsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,29 +2,34 @@
     "german":{
         "titles":[
             "Über Mich",
-            "Hey, ich bin Marcel Arndt",
+            "Hey, ich bin",
+            "Marcel\u00a0Arndt",
+            "Was es für mich\u00a0bedeutet",
             "Wer bin ich und was zeichnet mich aus?"
+
 
         ],
         "texte":[
             "Ich bezeichne mich selbst als Frontend- sowie Backend-Entwickler aus Bad Salzuflen (NRW).",
-            "Für mich ist Programmieren weit mehr als nur das Schreiben von Code. Es ist wie Kochen – eine kreative Kunst, bei der verschiedene Komponenten harmonisch zusammenspielen, um etwas Neues und Einzigartiges zu erschaffen.",
+            "Für mich ist das Programmieren weit mehr als nur das Schreiben von Code. Es ist wie Kochen, sprich eine kreative Kunst, bei der verschiedene Komponenten harmonisch zusammenspielen, um so etwas Neues und Einzigartiges zu erschaffen. ",
             "Eine selbstgemachte Web-App oder ein leckeres Chili sind für mich die perfekten Symbole für Erfolg, die mich stets vorantreiben und motivieren.",
-            "In den letzten Jahren habe ich über 14 Projekte erfolgreich umgesetzt und mir dadurch einen wertvollen Wissensschatz sowie einen soliden Tech-Stack aufgebaut. Diese Erfahrungen ermöglichen es mir, neue Herausforderungen souverän zu meistern.",
+            "Ich habe über 14 Projekte erfolgreich umgesetzt und mir dadurch einen wertvollen Wissensschatz sowie einen soliden Tech-Stack aufgebaut. Diese Erfahrungen ermöglichen es mir, neue und kommende Herausforderungen zu meistern.",
             "Ich liebe es, mich neuen Herausforderungen zu stellen und durch ehrliches Feedback stetig zu wachsen. Denn nur durch kontinuierliche Weiterentwicklung und offene Kommunikation entsteht echter Fortschritt."
         ]
     },
     "english":{
         "titles":[
             "About me",
-            "Hey, I'am Marcel Arndt",
+            "Hey, I'am",
+            "Marcel Arndt",
+            "What does it mean to\u00a0myself?",
             "Who am I and what defines me?"
         ],
         "texte":[
             "I consider myself a frontend and backend developer from Bad Salzuflen (NRW).",
             "For me, programming is much more than just writing code. It's like cooking – a creative art where different components harmoniously come together to create something new and unique.",
             "A self-made web app or a delicious chili are, in my eyes, the perfect symbols of success that constantly drive and motivate me.",
-            "Over the past few years, I have successfully completed more than 14 projects, building a valuable knowledge base and a solid tech stack. These experiences allow me to confidently tackle new challenges.",
+            "I have successfully completed over 14 projects, building a valuable knowledge base and a solid tech stack. These experiences enable me to tackle new challenges with confidence.",
             "I love taking on new challenges and growing through honest feedback. Because true progress only comes through continuous development and open communication."
         ]
     }

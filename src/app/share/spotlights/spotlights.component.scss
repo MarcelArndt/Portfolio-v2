@@ -1,0 +1,19 @@
+div{
+    position: absolute;
+}
+
+.decoration-middle{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+}
+
+.decoration-right{
+    right: 0px;
+    top: 0px;
+}
+
+.decoration-left-bottom{
+    left: 0px;
+    bottom: -5px;
+}

@@ -3,12 +3,13 @@ import { TextService } from '../../text.service';
 import { CommonModule } from '@angular/common';
 import { skillsSectionAnimation } from './gsap-skills-section';
 import { ConfigService } from '../../config.service';
+import { SpotlightsComponent } from '../../share/spotlights/spotlights.component';
 
 
 
 @Component({
   selector: 'app-skills-section',
-  imports: [CommonModule,],
+  imports: [CommonModule, SpotlightsComponent],
   templateUrl: './skills-section.component.html',
   styleUrls: ['./skills-section.component.scss', './pacman.scss']
 })

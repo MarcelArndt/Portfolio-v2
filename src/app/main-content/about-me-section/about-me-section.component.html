@@ -1,37 +1,42 @@
 <div class="wrapper-about-me" *ngIf="textSertvice.texte$ | async as text">
 
-    <div class="decoration-middle"><img src="./site-elements/white-middle-element.png"></div>
-    <div class="decoration-right"><img src="./site-elements/pink-element.png"></div>
+    <spotlights></spotlights>
 
     <div class="wrapper-delimiter">
 
         <h2 class="headlineOne">{{text?.["aboutMeSection"]?.["titles"]?.[0]}}</h2>
-        <!--
-        <div class="polygon polygon-left-top"><img src="./about-me/Polygon 26.png"></div>
-        <div class="polygon polygon-right-top"><img src="./about-me/Polygon 28.png"></div>
-        <div class="polygon polygon-right-bottom"><img src="./about-me/Polygon 27.png"></div>
-        -->
 
-        <content class="content">
 
-                <div class="textBoxOne">
+        <div class="deko-box">
+            <div class="boxOne"><div class="animationFrameWork"> <img src="./about-me/polygon28.png"> </div></div>
+            <div class="boxTwo"><div class="animationFrameWork" [ngStyle]="{'animation-duration':'8.5s'}"> <img src="./about-me/polygon29.png"> </div></div>
+            <div class="boxThree"><div class="animationFrameWork" [ngStyle]="{'animation-delay': '1s'}"> <img src="./about-me/icon.png"></div></div>
+        </div>
+
+        <content>
+
+            <profilpicture class="profilPicture" ></profilpicture>
+
+            <section class="content-text-delimiter">
+
+                <article class="textBoxOne">
                     <h3 class="headlineTwo">{{text?.["aboutMeSection"]?.["titles"]?.[1]}}</h3>
-                    <p class="bold text">{{text?.["aboutMeSection"]?.["titles"]?.[2]}}</p>
-                    <p >{{text?.["aboutMeSection"]?.["texte"]?.[0]}}</p>
-                </div>
+                    <h3 class="headlineTwo">{{text?.["aboutMeSection"]?.["titles"]?.[2]}}</h3>
+                    <p class="bold text">{{text?.["aboutMeSection"]?.["titles"]?.[4]}}</p>
+                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[0]}}</p>
+                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[1]}}</p>
+                </article>
             
-                <p class="textBoxTwo">{{text?.["aboutMeSection"]?.["texte"]?.[1]}}</p>
+        
+                <article class="textBoxTwo">
+                    <h3 class="headlineTwo">{{text?.["aboutMeSection"]?.["titles"]?.[3]}}</h3>
+                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[2]}}</p>
+                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[3]}}</p>
+                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[4]}}</p>
+                </article>
 
-                <p class="textBoxThree">{{text?.["aboutMeSection"]?.["texte"]?.[3]}}</p>
-                <p class="textBoxFour">{{text?.["aboutMeSection"]?.["texte"]?.[4]}}</p>
+            </section>
 
-                <nav class="about-me-navi">  
-                    <ul>
-                        <li><icon>lightbulb</icon></li>
-                        <li><icon>location_on</icon></li>
-                        <li><icon>toys_and_games</icon></li>
-                    </ul>
-                </nav>
         </content>
 
     </div>
