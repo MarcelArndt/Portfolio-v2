@@ -15,7 +15,7 @@ export function aboutMeSectionAnimation(){
             pin: true,
         }
     });
-
+    
     tl.to([".headlineOne"], {opacity:1, y:0, duration: 0.5})
     .to([".textBoxOne", ".profilPicture"],{ 
         opacity:1, 

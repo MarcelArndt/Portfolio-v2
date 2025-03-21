@@ -5,7 +5,7 @@
     width: 100%;
     display: flex;
     justify-items: center;
-    z-index: 100;
+    z-index: 1000;
     position: sticky;
     top:0px;
     display: flex;
@@ -38,7 +38,7 @@
 
 .logo{
     img{
-        height: 76px;;
+        width: 180px;
     }
 }
 nav{
@@ -121,10 +121,11 @@ nav{
     align-items: center;
     justify-content: center;
     border-radius: 32px;
-    border: 2px solid var(--white);
     padding: 4px 12px;
     position: relative;
-    color: var(--white);
+    color: var(--light-grey);
+    padding: 8px 12px 4px 16px;
+    user-select: none;
 
     p{
         font-weight: 400;
@@ -132,11 +133,39 @@ nav{
         font-size: 18px;
     }
 
+    icon{
+        color: var(--white);
+    }
+
     &:hover{
         border-color: var(--pink);
         cursor: pointer;
         color: var(--white);
+        opacity: 1;
+        transition: opacity 0.125s ease-in;
     }
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        padding: 2px; 
+        border-radius: 32px;
+        background: linear-gradient(45deg, var(--pink), var(--red)); 
+        -webkit-mask: 
+          linear-gradient(white, white) content-box, 
+          linear-gradient(white, white);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        filter: brightness(1000%) saturate(0%) contrast(100%);;
+    }
+
+    &:hover::before{
+        filter: brightness(100%) saturate(100%) contrast(100%);;
+    }
+
 }
 
 @media (max-width: 1400px){
@@ -155,8 +184,11 @@ nav{
     }
 
     .navigation-icon{
+        box-sizing: border-box;
+        padding-top: 8px;
         display: flex !important;
         max-width: 36px;
+        height: 100%;
     }
 
     .navigation{

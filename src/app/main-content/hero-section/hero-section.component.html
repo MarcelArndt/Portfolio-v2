@@ -10,22 +10,26 @@
 
     <div class="wrapper">
 
+
+        <div class="parallax-background" parallaxBg></div>
+        <div class="parallax-shadow"></div>
+
         <spotlights></spotlights>
         <div class="wrapper-delimiter">
 
-        <profilpicture></profilpicture>
+            <div class="profil-picture"><img src="./site-elements/hero-picture.png"></div>
 
         <div class="left-container">
             <div class="main-container">
                 <div>
                     <h1>{{texte?.['heroSection']?.['headline']?.[0]}}</h1>
-                    <p>{{texte?.['heroSection']?.['headline']?.[1]}}</p>
-                    <p>{{texte?.['heroSection']?.['headline']?.[2]}}</p>
+                    <h4>{{texte?.['heroSection']?.['headline']?.[1]}}</h4>
+                    <h5>{{texte?.['heroSection']?.['headline']?.[2]}}</h5>
                 </div>
         
                 <div class="category">
                     <div class="category-button"><icon>table_eye</icon>Frontend</div>
-                    <div class="category-button"><icon>database</icon>Backend</div>
+                    <div class="category-button" ><icon>database</icon>Backend</div>
                 </div>
             </div>
         

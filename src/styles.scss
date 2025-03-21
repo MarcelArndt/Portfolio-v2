@@ -12,19 +12,26 @@
     --background : #131428;
     --white : #ffffff;
     --grey :  #2E3455;
+    --light-grey :  #6f7285;
     --purble: #1C0018;
     --dark-pink: #33004d;
     --blueberry: #1C0018;
     --pink : #BB00FF;
+    --red-pink: #E0026C;
     --red : #ED043E;
     --blue: #2641db;
     --blue-gradient: linear-gradient(15deg, rgb(75, 0, 187) 0%, rgb(134, 30, 232) 100%);
     --pink-gradient: linear-gradient(15deg, var(--pink) 0%, var(--red) 100%);
     --normal-text-size: #{clamp(1rem, 2vw, 1.3125rem)};
     --icon-size: 1.25rem;
-    --h1-size: #{clamp(2.5rem, 10vw, 7.5rem)};
+    
+    --h1-size: #{clamp(2.75rem, 10vw, 7.5rem)};
     --h2-size: #{clamp(2.5rem, 6vw, 5rem)};
+
     --h3-size: #{clamp(1.75rem, 3vw, 3.5rem)};
+
+    --h4-size: #{clamp(1.5rem, 5vw, 5rem)};
+    --h5-size: #{clamp(1rem, 5vw, 2rem)};
 }
 
 body.no-scroll{
@@ -77,6 +84,7 @@ h1{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     margin-bottom: 12px;
+    max-width: 90vw;
 }
 
 h2 {
@@ -113,8 +121,38 @@ h3{
     word-break: normal;
     overflow-wrap: break-word;
     white-space: normal;
-    max-width: max-content;
+    max-width: 90vw;
 }
+
+h4{
+    font-weight: 350;
+    font-size: var(--h4-size);
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 24px;
+    word-break: normal;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 90vw;
+}
+
+h5{
+    font-weight: 350;
+    font-size: var(--h5-size);
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 24px;
+    word-break: normal;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: min(90vw, 1080px);
+    line-height: 130%;
+}
+
 
 icon{
     user-select: none;
