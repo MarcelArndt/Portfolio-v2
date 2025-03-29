@@ -17,25 +17,55 @@
 
             <profilpicture class="profilPicture" ></profilpicture>
 
-            <section class="content-text-delimiter">
+            <section class="right-box">
+                <div class="head-area">
+                    <h3>{{text?.["aboutMeSection"]?.["titles"]?.[1]}}</h3>
+                    <h3>{{text?.["aboutMeSection"]?.["titles"]?.[2]}}</h3>
+                    <p class="headline-text">{{text?.["aboutMeSection"]?.["titles"]?.[3]}}</p>
+                </div>
 
-                <article class="textBoxOne">
-                    <h3 class="headlineTwo">{{text?.["aboutMeSection"]?.["titles"]?.[1]}}</h3>
-                    <h3 class="headlineTwo">{{text?.["aboutMeSection"]?.["titles"]?.[2]}}</h3>
-                    <p class="bold text">{{text?.["aboutMeSection"]?.["titles"]?.[4]}}</p>
-                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[0]}}</p>
-                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[1]}}</p>
-                </article>
-            
-        
-                <article class="textBoxTwo">
-                    <h3 class="headlineTwo">{{text?.["aboutMeSection"]?.["titles"]?.[3]}}</h3>
-                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[2]}}</p>
-                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[3]}}</p>
-                    <p>{{text?.["aboutMeSection"]?.["texte"]?.[4]}}</p>
-                </article>
+                <hr>
 
+              
+                <div class="content-text-delimiter">
+
+                    <glowing-box>
+                        <article class="textBox" #box>
+                            <div class="icon-border"><icon>info_i</icon></div>
+                            <p>{{text?.["aboutMeSection"]?.["titles"]?.[4]}}</p>
+                            <p class="flow-text">{{text?.["aboutMeSection"]?.["texte"]?.[0]}}</p>
+                        </article>
+                    </glowing-box>
+
+                
+                    <glowing-box>
+                        <article class="textBox" #box>
+                            <div class="icon-border"><icon>lightbulb_2</icon></div>
+                            <p>{{text?.["aboutMeSection"]?.["titles"]?.[5]}}</p>
+                            <p class="flow-text">{{text?.["aboutMeSection"]?.["texte"]?.[1]}}</p>
+                        </article>
+                    </glowing-box>
+    
+
+                    <glowing-box>
+                        <article class="textBox" #box>
+                            <div class="icon-border"><icon>check</icon></div>
+                            <p>{{text?.["aboutMeSection"]?.["titles"]?.[6]}}</p>
+                            <p class="flow-text">{{text?.["aboutMeSection"]?.["texte"]?.[3]}}</p>
+                        </article>
+                    </glowing-box>
+    
+                    <glowing-box>
+                        <article class="textBox" #box>
+                            <div class="icon-border"><icon>flag</icon></div>
+                            <p>{{text?.["aboutMeSection"]?.["titles"]?.[7]}}</p>
+                            <p class="flow-text">{{text?.["aboutMeSection"]?.["texte"]?.[4]}}</p>
+                        </article>
+                    </glowing-box>
+                </div>
             </section>
+
+           
 
         </content>
 

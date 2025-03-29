@@ -4,10 +4,11 @@
             "Über Mich",
             "Hey, ich bin",
             "Marcel\u00a0Arndt",
-            "Was es für mich\u00a0bedeutet",
-            "Wer bin ich und was zeichnet mich aus?"
-
-
+            "Hier sind ein paar Infos über mich. Ich freue mich, mehr über Dich zu erfahren!",
+            "Wer bin ich",
+            "Programmieren ist für mich",
+            "Meine Erfolge",
+            "Nächste Ziele"
         ],
         "texte":[
             "Ich bezeichne mich selbst als Frontend- sowie Backend-Entwickler aus Bad Salzuflen (NRW).",
@@ -18,12 +19,15 @@
         ]
     },
     "english":{
-        "titles":[
-            "About me",
-            "Hey, I'am",
+        "titles": [
+            "About Me",
+            "Hey, I am",
             "Marcel Arndt",
-            "What does it mean to\u00a0myself?",
-            "Who am I and what defines me?"
+            "Here are a few facts about me. I look forward to learning more about you!",
+            "Who am I",
+            "Programming is for me",
+            "My Achievements",
+            "Next Goals"
         ],
         "texte":[
             "I consider myself a frontend and backend developer from Bad Salzuflen (NRW).",
