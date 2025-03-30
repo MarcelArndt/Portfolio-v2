@@ -4,8 +4,11 @@
 
     <div class="wrapper-delimiter">
 
-        <h2 class="headlineOne">{{text?.["aboutMeSection"]?.["titles"]?.[0]}}</h2>
-
+        <div class="headlineBlock">
+            <div class="headlineOne">
+                <h2 >{{text?.["aboutMeSection"]?.["titles"]?.[0]}}</h2>
+            </div>
+        </div>
 
         <div class="deko-box">
             <div class="boxOne"><div class="animationFrameWork"> <img src="./about-me/polygon28.png"> </div></div>
@@ -19,12 +22,12 @@
 
             <section class="right-box">
                 <div class="head-area">
-                    <h3>{{text?.["aboutMeSection"]?.["titles"]?.[1]}}</h3>
-                    <h3>{{text?.["aboutMeSection"]?.["titles"]?.[2]}}</h3>
-                    <p class="headline-text">{{text?.["aboutMeSection"]?.["titles"]?.[3]}}</p>
+                    <div class="div-to-hide"><h3 class="to-hide">{{text?.["aboutMeSection"]?.["titles"]?.[1]}}</h3></div>
+                    <div class="div-to-hide"><h3 class="to-hide">{{text?.["aboutMeSection"]?.["titles"]?.[2]}}</h3></div>
+                    <div class="div-to-hide"><p class="headline-text to-hide">{{text?.["aboutMeSection"]?.["titles"]?.[3]}}</p></div>
                 </div>
 
-                <hr>
+                <hr class="hr-animtion">
 
               
                 <div class="content-text-delimiter" [ngClass]="{'reduce-size':isinfoBoxOpen}">
@@ -44,7 +47,7 @@
                     </div>
                         
 
-                    <glowing-box (click)="stopPropagation($event); clickOnBox(0)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
+                    <glowing-box class="animtion-box" (click)="stopPropagation($event); clickOnBox(0)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
                         <article class="textBox" #box>
                             <div class="icon-border"><icon>info_i</icon></div>
                             <p>{{text?.["aboutMeSection"]?.["titles"]?.[4]}}</p>
@@ -53,7 +56,7 @@
                     </glowing-box>
 
                 
-                    <glowing-box (click)="stopPropagation($event); clickOnBox(1)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
+                    <glowing-box class="animtion-box" (click)="stopPropagation($event); clickOnBox(1)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
                         <article class="textBox" #box>
                             <div class="icon-border"><icon>lightbulb_2</icon></div>
                             <p>{{text?.["aboutMeSection"]?.["titles"]?.[5]}}</p>
@@ -62,7 +65,7 @@
                     </glowing-box>
     
 
-                    <glowing-box (click)="stopPropagation($event); clickOnBox(2)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
+                    <glowing-box class="animtion-box" (click)="stopPropagation($event); clickOnBox(2)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
                         <article class="textBox" #box>
                             <div class="icon-border"><icon>check</icon></div>
                             <p>{{text?.["aboutMeSection"]?.["titles"]?.[6]}}</p>
@@ -70,7 +73,7 @@
                         </article>
                     </glowing-box>
     
-                    <glowing-box (click)="stopPropagation($event); clickOnBox(3)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
+                    <glowing-box class="animtion-box" (click)="stopPropagation($event); clickOnBox(3)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
                         <article class="textBox" #box>
                             <div class="icon-border"><icon>flag</icon></div>
                             <p>{{text?.["aboutMeSection"]?.["titles"]?.[7]}}</p>
