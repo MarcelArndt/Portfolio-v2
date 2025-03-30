@@ -9,6 +9,7 @@
 }
 
 .element{
+    width: clamp(48px, 7vw, 80px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,8 +18,8 @@
 }
 
 .element-left-top{
-    left:80px;
-    top:164px;
+    left:9%;
+    top:18%;
     animation-duration: 8s;
     animation-delay: 1.25s;
 }
@@ -32,7 +33,7 @@
 
 .element-right-down{
     right: 10px;
-    bottom: 135px;
+    bottom: 10%;
     animation-duration: 8s;
     animation-delay: 2s;
 }

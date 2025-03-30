@@ -1,4 +1,4 @@
-<div class="wrapper-about-me" *ngIf="textSertvice.texte$ | async as text">
+<div class="wrapper-about-me" (click)="clickToCloseBox()" *ngIf="textSertvice.texte$ | async as text">
 
     <spotlights></spotlights>
 
@@ -27,9 +27,24 @@
                 <hr>
 
               
-                <div class="content-text-delimiter">
+                <div class="content-text-delimiter" [ngClass]="{'reduce-size':isinfoBoxOpen}">
 
-                    <glowing-box>
+                    <div index='#fullInfoBox' #fullInfoBox [ngClass]="{'fade-in':isinfoBoxOpen, 'fade-out':!isinfoBoxOpen}" class="full-size-box">
+                        <glowing-box width="100%" height="100%" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
+
+                            <div class="inside-wrapper">
+                                <div class="flow-box">  
+                                    <div class="icon-border"><icon>{{iconArray[currentTextIndex]}}</icon></div>
+                                    <h5>{{text?.["aboutMeSection"]?.["titles"]?.[currentTextIndex + 4]}}</h5>
+                                </div>
+                                <p class="flow-text">{{text?.["aboutMeSection"]?.["texte"]?.[currentTextIndex]}}</p>
+                            </div>
+
+                        </glowing-box>
+                    </div>
+                        
+
+                    <glowing-box (click)="stopPropagation($event); clickOnBox(0)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
                         <article class="textBox" #box>
                             <div class="icon-border"><icon>info_i</icon></div>
                             <p>{{text?.["aboutMeSection"]?.["titles"]?.[4]}}</p>
@@ -38,7 +53,7 @@
                     </glowing-box>
 
                 
-                    <glowing-box>
+                    <glowing-box (click)="stopPropagation($event); clickOnBox(1)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
                         <article class="textBox" #box>
                             <div class="icon-border"><icon>lightbulb_2</icon></div>
                             <p>{{text?.["aboutMeSection"]?.["titles"]?.[5]}}</p>
@@ -47,21 +62,22 @@
                     </glowing-box>
     
 
-                    <glowing-box>
+                    <glowing-box (click)="stopPropagation($event); clickOnBox(2)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
                         <article class="textBox" #box>
                             <div class="icon-border"><icon>check</icon></div>
                             <p>{{text?.["aboutMeSection"]?.["titles"]?.[6]}}</p>
-                            <p class="flow-text">{{text?.["aboutMeSection"]?.["texte"]?.[3]}}</p>
+                            <p class="flow-text">{{text?.["aboutMeSection"]?.["texte"]?.[2]}}</p>
                         </article>
                     </glowing-box>
     
-                    <glowing-box>
+                    <glowing-box (click)="stopPropagation($event); clickOnBox(3)" [ngClass]="{'fade-out':isinfoBoxOpen}" [width]="348" [height]="154" [borderRadius]="12" [borderThickness]="2" backgroundColor="#383969" glowColor="#4254b3">
                         <article class="textBox" #box>
                             <div class="icon-border"><icon>flag</icon></div>
                             <p>{{text?.["aboutMeSection"]?.["titles"]?.[7]}}</p>
-                            <p class="flow-text">{{text?.["aboutMeSection"]?.["texte"]?.[4]}}</p>
+                            <p class="flow-text">{{text?.["aboutMeSection"]?.["texte"]?.[3]}}</p>
                         </article>
                     </glowing-box>
+
                 </div>
             </section>
 

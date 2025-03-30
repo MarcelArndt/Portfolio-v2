@@ -1,7 +1,17 @@
 
-<div class="container">
-    <div class="inner-container" [style.--position-top]="positionTop" [style.--position-left]="positionLeft">
-        <ng-content></ng-content>
+<div class="container"
+[style.--_box-width]="boxWidth" 
+[style.--_box-height]="boxHeight"
+[style.--_border-radius]="boxBorderRadius" 
+[style.--_border_thickness]="boxBorderThickness" 
+[style.--_glow-color]="glowColor" 
+[style.--_background]="backgroundColor" 
+[style.--position-top]="positionTop" 
+[style.--position-left]="positionLeft">
+    <div class="inner-container" >
+        <div class="content-container">        
+            <ng-content></ng-content>
+        </div>
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, HostListener, ViewChildren, ElementRef, ChangeDetectorRef, QueryList } from '@angular/core';
+import { Component, ElementRef, ChangeDetectorRef, viewChild, ViewChild} from '@angular/core';
 import { IconComponent } from '../../share/icon/icon.component';
 import { TextService } from '../../text.service';
 import { CommonModule } from '@angular/common';
@@ -15,27 +15,34 @@ import { GlowingBoxComponent } from '../../share/glowing-box/glowing-box.compone
 })
 export class AboutMeSectionComponent {
   constructor(public textSertvice: TextService, private cdr: ChangeDetectorRef){}
+  @ViewChild("fullInfoBox") infoBox!:ElementRef;
+  mouseX:number = 0;
+  mouseY:number = 0;
+  currentNaviValue:number = 0;
+  currentTextIndex:number = 0;
+  isinfoBoxOpen:boolean = false;
 
-  @ViewChildren("box") aboutMeTextBoxArray!: QueryList<ElementRef>;
+  iconArray:string[]= ['info_i', 'lightbulb_2', 'check', 'flag']
 
-  mouseX:number = 0
-  mouseY:number = 0
-  currentNaviValue:number = 0
-
-  
 
   ngAfterViewInit(){
     aboutMeSectionAnimation();
     this.cdr.detectChanges();
-
+    console.log(this.infoBox)
   }
-  
-  ngOnInit(){
-    
+
+  clickOnBox(index:number=0){
+    this.currentTextIndex = index;
+    this.isinfoBoxOpen = true;
+    this.infoBox.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
-  
 
+  clickToCloseBox(){
+    this.isinfoBoxOpen = false;
+  }
 
-
+  stopPropagation(event:Event){
+    event.stopPropagation();
+  }
 
 }

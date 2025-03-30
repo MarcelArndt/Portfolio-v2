@@ -1,4 +1,4 @@
-import { Component ,HostListener, Renderer2, ElementRef} from '@angular/core';
+import { Component ,HostListener, input, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,10 +9,15 @@ import { CommonModule } from '@angular/common';
 })
 export class GlowingBoxComponent {
 
-  constructor(private element: ElementRef, private renderer: Renderer2) {}
+@Input()width:any;
+@Input()height:any;
+@Input()glowColor:string = '#efefef';
+@Input()backgroundColor:string = '#424242';
+@Input()borderThickness:number = 2
+@Input()borderRadius:number = 12
 
-    positionX:number=0
-    positionY:number=0
+positionX:number=0;
+positionY:number=0;
 
   @HostListener('mousemove', ['$event'])
     setPosition(event:MouseEvent){
@@ -23,6 +28,28 @@ export class GlowingBoxComponent {
       this.positionY = event.clientY - rect.top; 
 
     }
+
+  get boxBorderThickness(){
+      return `${this.borderThickness}px`
+  }
+
+  get boxBorderRadius(){
+      return `${this.borderRadius}px`
+  }
+
+  get boxWidth(){
+    if (typeof this.width == "number"){
+      return `${this.width}px`
+    }
+    return this.width
+  }
+
+  get boxHeight(){
+    if (typeof this.width == "number"){
+    return `${this.height}px`
+    }
+    return this.height
+  }
 
   get positionLeft(){
     return `${this.positionX}px`
